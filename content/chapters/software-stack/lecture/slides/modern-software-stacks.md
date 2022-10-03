@@ -6,40 +6,47 @@
 
 ### Android Software Stack
 
-TODO
+<img src="media/android-software-stack.png" alt="Android Software Stack" width="40%" />
+<!-- https://www.pcloudy.com/android-and-ios-basics-and-comparison/ -->
 
 ----
 
 ### iOS Software Stack
 
-TODO
+<img src="media/ios-software-stack.png" alt="iOS Software Stack" width="50%" />
+<!-- https://www.pcloudy.com/android-and-ios-basics-and-comparison/ -->
 
 ----
 
 ### Windows Software Stack
 
-TODO
+![Windows](media/windows.png)
+<!-- https://medium.com/@putrasulung2108/windows-architecture-d2b022f136d3 -->
 
 ----
 
 ### macOS Software Stack
 
-TODO
+![macOS](media/macos.svg)
+<!-- https://en.wikipedia.org/wiki/Architecture_of_macOS -->
 
 ----
 
 ### Linux Software Stack
 
-TODO
+![Linux](media/linux.svg)
+<!-- https://en.wikipedia.org/wiki/Linux -->
 
 ----
 
-### TODO: Smart Device Software Stack
+### RIOT (IoT devices)
 
-TODO
+![Tock](media/riot.png)
+<!-- https://desosa.nl/projects/riot/2020/03/19/riot-from-vision-to-architecture.html -->
 
 ----
 
-### TODO: Embedded Software Stack
+### Tock (low-power microcontrollers)
 
-TODO
+<img src="media/tock.png" alt="Tock" width="60%" />
+<!-- https://www.tockos.org/documentation/design/ -->
