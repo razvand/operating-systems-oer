@@ -33,6 +33,7 @@ test_mmap()
 
     "$exec_file" &
     PID=$!
+    sleep 0.5
     mem1=$(ps -o vsz --noheader --pid $PID)
     sleep 2
     mem2=$(ps -o vsz --noheader --pid $PID)

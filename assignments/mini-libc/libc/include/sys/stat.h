@@ -43,23 +43,28 @@ extern "C" {
 
 /* Structure describing file characteristics.  */
 struct stat {
-	mode_t st_mode;		/* File mode.  */
-	ino_t st_ino;		/* File serial number.  */
 
-	dev_t st_dev;		/* Device containing the file.  */
-	nlink_t st_nlink;	/* Link count.  */
+	uint64_t	st_dev;
+	uint64_t	st_ino;
+	uint64_t	st_nlink;
 
-	uid_t st_uid;		/* User ID of the file's owner.  */
-	gid_t st_gid;		/* Group ID of the file's group.  */
+	unsigned int		st_mode;
+	unsigned int		st_uid;
+	unsigned int		st_gid;
+	unsigned int		__pad0;
+	uint64_t	st_rdev;
+	int64_t		st_size;
+	int64_t		st_blksize;
+	int64_t		st_blocks;	/* Number 512-byte blocks allocated. */
 
-	off_t st_size;		/* Size of file, in bytes.  */
+	uint64_t	st_atime;
+	uint64_t	st_atime_nsec;
+	uint64_t	st_mtime;
+	uint64_t	st_mtime_nsec;
+	uint64_t	st_ctime;
+	uint64_t	st_ctime_nsec;
+	int64_t		__unused[3];
 
-	uint32_t st_blksize;	/* Block size for filesystem I/O */
-	uint64_t  st_blocks;	/* Number of 512B blocks allocated */
-
-	int64_t st_atime;	/* Time of last access, in seconds, since 00:00:00 1st January 1970 UTC */
-	int64_t st_mtime;	/* Time of last modification, in seconds, since 00:00:00 1st January 1970 UTC.  */
-	int64_t st_ctime;	/* Time of last status change, in seconds, since 00:00:00 1st January 1970 UTC.  */
 };
 
 int stat(const char *__restrict, struct stat *__restrict);

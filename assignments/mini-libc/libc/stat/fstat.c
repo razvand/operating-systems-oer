@@ -5,6 +5,6 @@
 
 int fstat(int fd, struct stat *st)
 {
-	/* TODO: Implement lseek(). */
+	/* TODO: Implement fstat(). */
 	return -1;
 }

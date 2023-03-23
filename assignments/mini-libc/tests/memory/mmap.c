@@ -11,7 +11,7 @@ int main(void)
 {
 	void *p;
 
-	sleep(1);
+	sleep(2);
 
 	p = mmap(NULL, ALLOC_SIZE, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
 	if (p == MAP_FAILED)

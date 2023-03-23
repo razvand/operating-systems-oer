@@ -14,7 +14,7 @@ static char *itoa(long i, char *b)
 {
 	char const digit[] = "0123456789";
 	char *p = b;
-	int shifter = i;
+	long shifter = i;
 
 	do {
 		++p;
@@ -44,7 +44,7 @@ int main(void)
 	int fd;
 	struct stat s;
 	int r;
-	char number[20];
+	char number[100];
 
 	fd = open(EXISTENT_FILE, 0, 0);
 	if (fd < 0)
@@ -54,19 +54,19 @@ int main(void)
 	if (r < 0)
 		exit(EXIT_FAILURE);
 
-	/* File type is regular */
-	if ((s.st_mode & __S_IFMT) != __S_IFREG)
-		exit(EXIT_FAILURE);
+	 /* File type is regular */
+	 if ((s.st_mode & __S_IFMT) != __S_IFREG)
+	 	exit(EXIT_FAILURE);
 
-	/* Print inode number */
-	reset_buffer(number, 20);
+	 /* Print inode number */
+	 reset_buffer(number, 20);
 
-	itoa((unsigned long)(s.st_ino), number);
-	write(1, number, strlen(number));
-	write(1, " ", 1);
+	 itoa((unsigned long)(s.st_ino), number);
+	 write(1, number, strlen(number));
+	 write(1, " ", 1);
 
-	/* Print UID */
-	reset_buffer(number, 20);
+	 /* Print UID */
+	 reset_buffer(number, 20);
 
 	itoa((long) (s.st_uid), number);
 	write(1, number, strlen(number));

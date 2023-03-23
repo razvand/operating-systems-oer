@@ -39,8 +39,9 @@ test_multiple_malloc()
 
     "$exec_file" &
     PID=$!
+    sleep 0.5
     mem1=$(ps -o vsz --noheader --pid $PID)
-    sleep 2
+    sleep 1
     mem2=$(ps -o vsz --noheader --pid $PID)
     kill $!
     kill -9 $!

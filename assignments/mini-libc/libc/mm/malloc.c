@@ -15,7 +15,7 @@ void *malloc(size_t size)
 
 void *calloc(size_t nmemb, size_t size)
 {
-	/* TODO: Implement malloc(). */
+	/* TODO: Implement calloc(). */
 	return NULL;
 }
 

@@ -7,6 +7,6 @@
 
 int close(int fd)
 {
-	/* TODO: Implement lseek(). */
+	/* TODO: Implement close(). */
 	return -1;
 }

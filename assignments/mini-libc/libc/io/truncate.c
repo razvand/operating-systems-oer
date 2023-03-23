@@ -6,6 +6,6 @@
 
 int truncate(const char *path, off_t length)
 {
-	/* TODO: Implement lseek(). */
+	/* TODO: Implement truncate(). */
 	return -1;
 }
